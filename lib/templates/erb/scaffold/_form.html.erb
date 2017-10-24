@@ -1,6 +1,6 @@
 <%%= form_for(<%= singular_table_name %>) do |f| %>
   <%% if <%= singular_table_name %>.errors.any? %>
-    <div id="error_explanation" class="w3-panel">
+    <div id="error_explanation">
       <h2><%%= pluralize(<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</h2>
 
       <ul>
@@ -15,20 +15,20 @@
   <div class="w3-panel">
 <% if attribute.password_digest? -%>
     <%%= f.label :password %>
-    <%%= f.password_field :password , class:"w3-input w3-border" %>
+    <%%= f.password_field :password , class:"w3-input" %>
   </div>
 
   <div>
     <%%= f.label :password_confirmation %>
-    <%%= f.password_field :password_confirmation , class:"w3-input w3-border" %>
+    <%%= f.password_field :password_confirmation , class:"w3-input" %>
 <% else -%>
     <%%= f.label :<%= attribute.column_name %> %>
-    <%%= f.<%= attribute.field_type %> :<%= attribute.column_name %> , class:"w3-input w3-border" %>
+    <%%= f.<%= attribute.field_type %> :<%= attribute.column_name %> , class:"w3-input" %>
 <% end -%>
   </div>
 
 <% end -%>
-  <div class="actions">
-    <%%= f.submit :Submit, class:"w3-button w3-light-gray" %>
+  <div class="w3-button">
+    <%%= f.submit :Submit, class:"w3-button w3-red" %>
   </div>
 <%% end %>
