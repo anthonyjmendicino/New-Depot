@@ -11,14 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="w3-panel">
     <%= form.label :product_id %>
-    <%= form.text_field :product_id, id: :line_item_product_id %>
+    <%= form.text_field :product_id, id: :line_item_product_id, class: "w3-input" %>
   </div>
 
-  <div class="field">
+  <div class="w3-panel">
     <%= form.label :cart_id %>
-    <%= form.text_field :cart_id, id: :line_item_cart_id %>
+    <%= form.text_field :cart_id, id: :line_item_cart_id, class: "w3-input" %>
   </div>
 
   <div class="actions">

@@ -3,8 +3,9 @@
 	  <% @cart.line_items.each do |item| %>
 	    <li><%= item.product.title %></li>
 	    <li><%= item.product.price %></li>
+	    <li><%= item.product.image_url%></li>
 	  <% end %>
 	</ul>
 	
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+<%= link_to 'Edit', edit_cart_path(@cart), class: "w3-button w3-red" %> |
+<%= link_to 'Back', carts_path, class: "w3-button w3-red" %>
