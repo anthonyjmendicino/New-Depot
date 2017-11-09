@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
- <div class="w3-container w3-center"><p><h1>Products</h1> 
-
-<table class="w3-table w3-bordered">
+ <div class="w3-container w3-center"><h1>Products</h1> 
+ <h6><%= link_to "Show My Cart", cart_path(current_cart), :class => "w3-button w3-black"%></h6>
+ 
+<table class="w3-table w3-bordered"> 
   <thead>
     <tr class="w3-red">
       <th>Title</th>
@@ -14,7 +15,7 @@
   </thead>
 
   <tbody>
-    <% @products.each do |product| %>
+    <% @products.each do |product| %> 
       <tr>
         <td><%= strip_tags(product.title) %></td>
         <td><%= strip_tags(product.description) %></td>

@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<div class="w3-panel w3-white w3-border w3-round-small">
+  
+<table class="w3-table-all">
+<thead>
+  <tr>
+    <th><h1>Order</h1></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+
+<td>
+  <strong>Name:</strong>
+</td>
+<td>
+  <%= @order.name %>
+</td>
+</tr>
+
+<td>
+  <strong>Address:</strong>
+</td>
+<td>
+  <%= @order.address %>
+</td>
+</tr>
+
+<td>
+  <strong>Email:</strong>
+</td>
+<td>
+  <%= @order.email %>
+</td>
+</tr>
+
+<td>
+  <strong>Pay type:</strong>
+</td>
+<td>
+  <%= @order.pay_type %>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<%= link_to 'Edit', edit_order_path(@order) ,class:"w3-button w3-red" %> |
+<%= link_to 'Back', orders_path , class:"w3-button w3-red" %>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
