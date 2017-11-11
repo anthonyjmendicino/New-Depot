@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="w3-white w3-border w3-round-small">
+  
+<table class="w3-table-all">
+<thead>
+  <tr>
+    <th><h1>User</h1></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+
+<td>
+  <strong>Name:</strong>
+</td>
+<td>
+  <%= @user.name %>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<%= link_to 'Edit', edit_user_path(@user) ,class:"w3-button w3-red" %> |
+<%= link_to 'Back', users_path , class:"w3-button w3-red" %>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
