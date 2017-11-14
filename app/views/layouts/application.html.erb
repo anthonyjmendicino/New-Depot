@@ -11,13 +11,24 @@
   <body class="w3-container w3-grey">
     <div>
       <a href="/static_pages/home" class="w3-button w3-red">Home</a>
+      <a href="/store/index" class="w3-button w3-red">Store</a>
       <a href="/static_pages/help" class="w3-button w3-red">Help</a>
       <a href="/static_pages/about" class="w3-button w3-red">About</a>
-      <a href="/products" class="w3-button w3-red">Products</a>
-      <a href="/store/index" class="w3-button w3-red">Store</a>
-      <a href="/carts" class="w3-button w3-red">Shopping Cart</a>
+      <%= link_to 'Login', login_path, method: :post, class:"w3-button w3-red" %>
+      <% if session[:user_id] %>
+       
+       <%= link_to 'Orders', orders_path, class: "w3-button w3-red" %>
+       <%= link_to 'Products', products_path, class:"w3-button w3-red" %>
+       <%= link_to 'Users', users_path, class:"w3-button w3-red" %>
+       <a href="/carts" class="w3-button w3-red">Shopping Cart</a>
       <a href="/line_items" class="w3-button w3-red">Line Items</a>
+       
+       <%= link_to 'Logout', logout_path, method: :delete, class:"w3-button w3-red" %>
+       <% end %>
     </ul>
     <%= yield %>
   </body>
 </html>
+
+
+ 

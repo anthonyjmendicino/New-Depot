@@ -1,12 +1,15 @@
 class ProductsController < ApplicationController
+  #skip_before_action :authorize , only: [:show, :edit, :update, :destroy]
   include CurrentCart
- before_action :set_cart
+  before_action :set_cart
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   
 
   # GET /products
   # GET /products.json
   def index
+  
+    
     @products = Product.all
   end
 
